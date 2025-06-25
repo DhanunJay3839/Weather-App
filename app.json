@@ -23,7 +23,12 @@
       "edgeToEdgeEnabled": true
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "name": "Weather App",
+  "shortName": "Weather",
+  "themeColor": "#ffffff",
+  "backgroundColor": "#ffffff",
+  "display": "standalone"
     },
     "extra": {
       "eas": {
