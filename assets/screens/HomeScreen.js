@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View ,Image,ScrollView,TextInput,Alert} from 'react-native'
+import { StyleSheet, Text, View ,Image,ScrollView,TextInput,Alert,TouchableOpacity} from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Feather } from '@expo/vector-icons';
@@ -147,26 +147,38 @@ const fetchWeatherByCoordinates = async (lat, lon, locationName) => {
 </Text>
 <View style={{paddingBottom:5}}>
 
-      <View style={{justifyContent:'flex-start',alignItems:'center',flexDirection:'row',width:'95%',height:46,borderRadius:10,borderWidth:1,backgroundColor:'#F9FAFB',borderColor:'#E5E7EB',paddingLeft:15,gap:10,alignSelf:'center',marginTop:5}}>
-            <View>
-                <Feather name="search" size={18} color="#9CA3AF" />
+      <View style={{flexDirection: 'row',
+      width: '95%',
+      height: 46,
+      borderRadius: 10,
+      borderWidth: 1,
+      backgroundColor: '#F9FAFB',
+      borderColor: '#E5E7EB',
+      paddingHorizontal: 10,
+      alignSelf: 'center',
+      marginTop: 5,
+      alignItems: 'center',
+      justifyContent: 'space-between'}}>
+            <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
+      <Feather name="search" size={18} color="#9CA3AF" style={{ marginRight: 8 }} />
+      <TextInput
+        style={{
+          fontSize: 16,
+          color: '#111827',
+          flex: 1,
+        }}
+        placeholder="Search for a city..."
+        value={city}
+        onChangeText={setCity}
+        onSubmitEditing={() => fetchWeatherByCity(city)}
+      />
+    </View>
 
-            </View>
-            <View style={{width:'100%'}}>
-                <TextInput  style={{
-    flex: 1,             
-      height: '100%',
-    fontSize: 16,
-    color: '#111827'
-  }}
-          
-          placeholder="Search for a city..."
-          value={city}
-          onChangeText={setCity}
-          onSubmitEditing={() => fetchWeatherByCity(city)}
-         
-        />
-            </View>
+            <TouchableOpacity onPress={() => fetchWeatherByCity(city)}>
+      <Text style={{ fontSize: 16, color: '#3B82F6', fontWeight: '500', paddingHorizontal: 5 }}>
+        Search
+      </Text>
+    </TouchableOpacity>
         </View>
         </View>
 
