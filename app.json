@@ -24,6 +24,18 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a173d786-1245-4552-a31f-d2408bc3d3fb"
+      }
+    },
+    "owner": "dhanunjay777",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/a173d786-1245-4552-a31f-d2408bc3d3fb"
     }
   }
 }

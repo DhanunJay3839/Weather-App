@@ -196,7 +196,7 @@ const fetchWeatherByCoordinates = async (lat, lon, locationName) => {
             </View>
 
             <View style={{flexDirection:'row',height:68,width:310,alignItems:'center',marginTop:10,paddingHorizontal:8}}>
-                <Text style={{fontSize:48,fontWeight:'500',color:'#111827'}}>{Math.round(weatherData?.main?.temp)}</Text>
+                <Text style={{fontSize:48,fontWeight:'500',color:'#111827'}}>{Math.round(weatherData?.main?.temp)}°</Text>
                 <Text style={{fontSize:16,fontWeight:'400',color:'#4B5563',marginLeft:20}}>{Math.round(weatherData?.main?.feels_like)}° feels like</Text>
             </View>
 
