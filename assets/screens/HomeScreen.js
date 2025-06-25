@@ -166,6 +166,7 @@ const fetchWeatherByCoordinates = async (lat, lon, locationName) => {
           fontSize: 16,
           color: '#111827',
           flex: 1,
+          outlineWidth: 0,
         }}
         placeholder="Search for a city..."
         value={city}
