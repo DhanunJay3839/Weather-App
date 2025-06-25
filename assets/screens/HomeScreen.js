@@ -226,8 +226,8 @@ const fetchWeatherByCoordinates = async (lat, lon, locationName) => {
 
         </LinearGradient>
 
-        <View style={{width:430,height:204,borderRadius:12,marginTop:10,paddingHorizontal:5}}>
-            <View style={{width: '100%', alignItems: 'flex-start', paddingHorizontal: 15, marginTop: 10,flexDirection:'row',gap:10,alignItems:'center'}}>
+        <View style={{width:'100%',height:204,borderRadius:12,marginTop:10,paddingHorizontal:5}}>
+            <View style={{width: '100%', alignItems: 'flex-start', paddingHorizontal: 5, marginTop: 10,flexDirection:'row',gap:10,alignItems:'center'}}>
               <View>
                 <Feather name="clock" size={18} color="#3B82F6" />
               </View>
